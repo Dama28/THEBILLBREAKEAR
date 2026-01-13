@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Eco-Modernist Palette */
+  --bg-color: #F0F4F1;
+  /* Soft Sage White */
+  --card-bg: #FFFFFF;
+  --primary-color: #2F5233;
+  /* Deep Forest Green */
+  --primary-light: #5A8C64;
+  /* Sage */
+  --accent-color: #DBC074;
+  /* Muted Gold */
+  --text-main: #1A261C;
+  /* Dark Charcoal Green */
+  --text-secondary: #5C6E60;
+  /* Stone Grey */
+  --border-color: #E2E8E4;
+  --success-color: #4E8D55;
+  --warning-color: #E6A23C;
+  --danger-color: #D9534F;
+
+  /* Spacing & Layout */
+  --radius-lg: 16px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 2px 8px rgba(47, 82, 51, 0.05);
+  --shadow-md: 0 4px 16px rgba(47, 82, 51, 0.08);
+  --shadow-lg: 0 8px 24px rgba(47, 82, 51, 0.12);
+
+  --font-family: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utilities for Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Responsive Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.col-span-12 {
+  grid-column: span 12;
+}
+
+.col-span-8 {
+  grid-column: span 8;
+}
+
+.col-span-4 {
+  grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+  .col-span-8 {
+    grid-column: span 12;
+  }
+
+  .col-span-4 {
+    grid-column: span 12;
+  }
+}
