@@ -104,7 +104,7 @@ function Dashboard() {
         borderRight: '1px solid var(--border-color)',
         position: 'fixed',
         height: '100vh',
-        zIndex: 10
+        zIndex: 50
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '48px' }}>
           <div style={{
